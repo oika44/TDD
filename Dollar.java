@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+package money;
+
+/**
+ * @author oika
+ *
+ */
+
