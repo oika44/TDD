@@ -1,6 +1,6 @@
 package TDD;
 
-public class Sum implements Expression { 
+public class Sum implements Expression {
 	//public Money augend1;
 	//public Money addend;
 	public Money augend;
@@ -10,9 +10,9 @@ public class Sum implements Expression {
 		this.augend =augend;
 		this.addend = addend;
 	}
-	public Money reduce(String to) {
+	public Money reduce(Bank bank,String to) {
 		int amount = augend.amount +addend.amount;
 		return new Money(amount,to);
 	}
-	
+
 }
