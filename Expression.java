@@ -1,7 +1,7 @@
 /**
  * 
  */
-package money;
+package TDD;
 
 /**
  * @author oika

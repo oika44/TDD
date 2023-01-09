@@ -1,4 +1,4 @@
-package money;
+package TDD;
 
 public class Sum implements Expression { 
 	//public Money augend1;

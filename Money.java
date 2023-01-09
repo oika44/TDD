@@ -1,4 +1,4 @@
-package money;
+package TDD;
 class Money implements Expression  {
 	protected int amount;
 	protected String currency;

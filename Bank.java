@@ -1,4 +1,4 @@
-package money;
+package TDD;
 
 public class Bank {
 	Money reduce(Expression source,String to) {
