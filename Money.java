@@ -7,7 +7,7 @@ class Money implements Expression  {
 		this.amount =amount ;
 		this.currency = currency;
 	}
-	static Money franc(int amount) {
+	public static Money franc(int amount) {
 		return new Money(amount,"CHF");
 	}
 	public boolean equals(Object object) {
@@ -19,7 +19,9 @@ class Money implements Expression  {
 		return amount + " " + currency;
 	}
 	public Money reduce(String to) {
-		return this;
+		int rate = (currency.contentEquals("CHF")&& to.contentEquals("USD"))?2:1;
+		return new Money(amount/rate,to);
+		//return this;
 	}
 //abstract Money times(int multiplier);
 	String currency() {
