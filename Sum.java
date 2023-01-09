@@ -3,9 +3,9 @@ package TDD;
 public class Sum implements Expression {
 	//public Money augend1;
 	//public Money addend;
-	public Money augend;
-	public Money addend;
-	Sum(Money augend,Money addend) {
+	public Expression augend;
+	public Expression addend;
+	Sum(Expression augend,Expression addend) {
 		//this.augend =augend1;
 		this.augend =augend;
 		this.addend = addend;
