@@ -8,5 +8,7 @@ package TDD;
  *
  */
 public interface Expression {
+	Expression plus(Expression addend);
+	Object reduce(Bank bank, String to);
 	
 }

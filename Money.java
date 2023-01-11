@@ -18,8 +18,8 @@ class Money implements Expression  {
 	public String toString() {
 		return amount + " " + currency;
 	}
-	public Money reduce(String to) {
-		int rate = (currency.contentEquals("CHF")&& to.contentEquals("USD"))?2:1;
+	public Money reduce(Bank bank,String to) {
+		int rate = bank.rate(currrency,to);
 		return new Money(amount/rate,to);
 		//return this;
 	}
@@ -34,7 +34,7 @@ class Money implements Expression  {
 	Money times(int multiplier) {
 		return new Money(amount * multiplier,currency);
 	}
-	Expression plus(Money addend) {
-		return new Money(amount + addend.amount ,currency) ;
+	public Expression plus(Expression addend) {
+		return new Sum(this,addend) ;
 	}
 }
